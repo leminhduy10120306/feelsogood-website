@@ -26,7 +26,7 @@ fetch("json/names.json")
 // Cập nhật ảnh GIF hiển thị
 function updateDisplay() {
   gifDisplay.src = `gifs/${gifList[currentIndex]}`;
-  gifName.textContent = nameList[currentIndex] || "Không rõ tên";
+  gifName.textContent = nameList[currentIndex] || "Unidentified";
 }
 
 // Xử lý nút "←"
