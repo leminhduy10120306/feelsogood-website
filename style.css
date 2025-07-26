@@ -54,6 +54,14 @@ h2 {
   color: #ffffff;
 }
 
+.separator {
+  width: 2px;
+  height: 30px;
+  background-color: #ffffff;
+  opacity: 1;
+  gap: 0.5rem;
+}
+
 .gif-wrapper {
   display: flex;
   align-items: center;
@@ -131,4 +139,25 @@ img#gifDisplay {
 
 .credits img:hover {
   filter: opacity(0.5);
+}
+
+.stats-table {
+  margin: 1rem auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.95rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.stats-table th, .stats-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.stats-table th {
+  background-color: #f5f5f5;
 }

@@ -8,6 +8,7 @@ const gifList = [
 ];
 
 let nameList = [];
+let statList = [];
 let currentIndex = 0;
 
 const gifDisplay = document.getElementById("gifDisplay");
@@ -16,17 +17,26 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
 // Load danh sách tên từ file names.json
-fetch("json/names.json")
-  .then(res => res.json())
-  .then(names => {
-    nameList = names;
-    updateDisplay();
-  });
+Promise.all([
+  fetch("json/names.json").then(res => res.json()),
+  fetch("json/stats.json").then(res => res.json())
+]).then(([names, stats]) => {
+  nameList = names;
+  statList = stats;
+  updateDisplay();
+});
+
 
 // Cập nhật ảnh GIF hiển thị
 function updateDisplay() {
   gifDisplay.src = `gifs/${gifList[currentIndex]}`;
   gifName.textContent = nameList[currentIndex] || "Unidentified";
+
+  const stat = statList[currentIndex] || {};
+  document.getElementById("stat-hp").textContent = stat.hp ?? "-";
+  document.getElementById("stat-armor").textContent = stat.armor ?? "-";
+  document.getElementById("stat-damage").textContent = stat.damage ?? "-";
+  document.getElementById("stat-speed").textContent = stat.speed ?? "-";
 }
 
 // Xử lý nút "←"

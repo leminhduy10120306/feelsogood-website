@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Igris Drake",
+    "hp": 1000,
+    "armor": 200,
+    "damage": 150,
+    "speed": 80
+  },
+  {
+    "name": "Inferno Demon",
+    "hp": 800,
+    "armor": 120,
+    "damage": 100,
+    "speed": 110
+  },
+  {
+    "name": "??????",
+    "hp": 1200,
+    "armor": 300,
+    "damage": 200,
+    "speed": 90
+  },
+  {
+    "name": "Blastoise",
+    "hp": 600,
+    "armor": 100,
+    "damage": 80,
+    "speed": 130
+  },
+  {
+    "name": "Charizard",
+    "hp": 1500,
+    "armor": 400,
+    "damage": 250,
+    "speed": 70
+  }
+]
