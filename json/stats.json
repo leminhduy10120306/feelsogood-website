@@ -15,10 +15,10 @@
   },
   {
     "name": "??????",
-    "hp": 1200,
-    "armor": 300,
-    "damage": 200,
-    "speed": 90
+    "hp": "???",
+    "armor": "???",
+    "damage": "???",
+    "speed": "???"
   },
   {
     "name": "Blastoise",

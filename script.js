@@ -50,3 +50,19 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % gifList.length;
   updateDisplay();
 });
+
+const darkModeBtn = document.getElementById("darkModeToggle");
+
+// Kiểm tra dark mode từ localStorage
+if (localStorage.getItem("dark-mode") === "true") {
+  document.body.classList.add("dark-mode");
+}
+
+// Xử lý khi click nút
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Lưu trạng thái vào localStorage
+  const isDark = document.body.classList.contains("dark-mode");
+  localStorage.setItem("dark-mode", isDark);
+});
